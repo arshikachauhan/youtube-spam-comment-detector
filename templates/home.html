@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"> -->
+
+    <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
+<!--    <title>Black Background with Centered Image</title>-->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: rgb(9, 9, 9);
+            background-image: url('bg-registration-form-7.jpg');
+            /* background-image: 'bg-registration-form-7.jpg'; */
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            min-height: 100vb;
+            color: white;
+        }
+        .form {
+            box-shadow: 5px 5px 5px black;
+            background-color: #39459b;
+            color: white;
+            position: absolute;
+            left: 400px;
+            top: 150px;
+            border: 5px solid #00ade6;
+            border-radius: 4px;
+            padding: 100px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: white;
+            text-align: center;
+        }
+
+        .btn-info {
+            box-shadow: 5px 5px 5px black;
+            width: 162px;
+            height: 51px;
+            border: 2px solid #fff;
+            margin: auto;
+            margin-top: 60px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            background: 0 0;
+            color: #fff;
+
+        }
+        .btn-info:hover{
+            background-color: rgb(92, 104, 96);
+            text-transform: uppercase;
+            font-family: montserrat-semibold;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            position: relative;
+            -webkit-transition-property: color;
+            transition-property: color;
+           -webkit-transition-duration: .3s;
+            transition-duration: .3s;
+        }
+    </style>
+
+	
+
+
+
+
+</head>
+<body>
+
+
+<h1>Youtube Spam Detection</h1>
+    <p>Check spam comments here</p>
+	<div class="form">
+
+		<form action="{{ url_for('predict')}}" method="POST">
+			<p style="text-align: center; font-size: 35px;"><strong>Check Comment Here</strong></p>
+            <div style="border: #fff 10px;"> </div>
+            <!-- <input type="text" name="comment"/> -->
+            <div class="write">
+
+                <textarea name="comment" rows="4" cols="50"></textarea>
+            </div>
+            <div style="padding-top: 10px;">
+
+                <input type="submit" class="btn-info" value="predict">
+            </div>
+            <br />
+
+	</form>
+
+
+
+
+		
+	</div>
+
+	
+	
+
+</body>
+</html>
+
